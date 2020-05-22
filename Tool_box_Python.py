@@ -1,4 +1,4 @@
-'''' Tool box Python - Udemy '''
+'''' Tool box Python '''
 
 ## Série d'exemples pour manipulation de données
 
