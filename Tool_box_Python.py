@@ -1,6 +1,6 @@
 '''' Tool box Python '''
 
-## Série d'exemples pour manipulation de données
+## Series of examples for data manipulation
 
 # Import :
 import numpy as np
@@ -10,68 +10,68 @@ import string
 from datetime import datetime
 from datetime import date
 
-# Ordonner une chaîne de caractère :
-chaine = 'Pierre, Julien, Anne, Marie, Lucien'
+# sorting a string :
+string = 'Pierre, Julien, Anne, Marie, Lucien'
 
-chaine_liste = chaine.split(', ')
-chaine_en_ordre = ', '.join(chaine_liste.sort())
-print(chaine_en_ordre)
+string_list = string.split(', ')
+sorted_string = ', '.join(string_list.sort())
+print(sorted_string)
 
-# Créer une liste de nombres :
-liste = list(range(10,29,2)) " de 10 à 28 avec un pas de 2
+# Create a list of numbers :
+list = list(range(10,29,2)) " de 10 à 28 avec un pas de 2
 
-# Choisir un nombre aléatoire dans une liste :
-rd.choice(liste)
+# Choose a random number from a list :
+rd.choice(list)
 
-# Compter le nombre d'occurrences d'une lettre dans une phrase :
-lettre_a_chercher = "o"
-phrase = "Bonjour tout le monde"
+# Counting the number of occurrences of a letter in a sentence :
+letter_to_find = "o"
+sentence = "hello everybody"
 
-print(phrase.lower().count(lettre_a_chercher)) " lower pour minuscules
+print(sentence.lower().count(letter_to_find)) " lower for lowercase
 
-# Récuperer 1 elément sur k dans une liste :
-listek = list(range(100))
-liste2[20:80:10]
+# Retrieve 1 item on k in a list :
+listk = list(range(100))
+list2[20:80:10]
 
-# Concatener 2 listes :
-liste + listek
+# concatenate 2 lists :
+list + listk
 
-# Avoir les elements communs à deux listes :
-liste1 = set(liste)
-liste2 = set(listek)
-intersect = list(liste1.intersection(liste2))
+# Having  common elements of two lists :
+list1 = set(list)
+list2 = set(listk)
+intersect = list(list1.intersection(list2))
 
-# Trier une liste de Tuples :
-liste3 = [("Harry Potter", 5), ("Wall-E", 3), ("Blade Runner", 4)]
-liste3.sort(key=lambda x: x[1]) "on trie par rapport à la note
-print(liste3)
+# Sorting a list of Tuples :
+list3 = [("Harry Potter", 5), ("Wall-E", 3), ("Blade Runner", 4)]
+list3.sort(key=lambda x: x[1]) "we sort by mark
+print(list3)
 
-# Récupere une valeur dans un dictionnaire :
-employes = {"01": {"identite": {"prenom": "Pierre", "nom": "Dupont"}}}
-employes.get("01", {}).get("identite", {}).get("prenom", "valeur_inconnue") "la 2e valeur du get est la valeur affichée en cas d'erreur
+# Retrieving a value from a dictionary :
+employes = {"01": {"identity": {"name": "Pierre", "surname": "Dupont"}}}
+employes.get("01", {}).get("identity", {}).get("name", "Unknow_value") "the 2nd value of the get is the value displayed in case of error
 
-# Additionner les valeurs d'un dictionnaire :
+# Adding values from a dictionary :
 employes2 = {"Pierre": 2500, "Marie": 5000, "Julien": 1200}
 sum(employes2.values())
 
-# Concatener des chaines de caractères :
-prenom = "Pierre"
-nom = "Dupont"
-print(f"Bonjour je m'appelle {prenom} {nom} ")
+# concatenate strings :
+name = "Pierre"
+surname = "Dupont"
+print(f"hello I'm {name} {surname} ")
 
 
-# Inverser les lettres d'un mot :
-mot = "Coucou"
-mot[::-1]
+# Invert the letters of a word :
+word = "hello"
+word[::-1]
 
-# Mélanger les lettres d'un mot :
-mot = list("bonjour")
-rd.shuffle(mot)
-"".join(mot)
+# Mixing the letters of a word :
+word = list("hello")
+rd.shuffle(word)
+"".join(word)
 
-# Additionner les chiffres d'un nombre :
-nombre = 209812
-sum([int(i) for i in str(nombre)])
+# Adding the digits of a number :
+number = 209812
+sum([int(i) for i in str(number)])
 
 # Remplacer un élément dans une liste :
 liste4 = ["Pierre", "Marie", "Julie", "Adrien", "Julie"]
