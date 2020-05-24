@@ -159,52 +159,52 @@ def password():
     print(pw)
 
 
-# Compter le nombre d'occurrence d'un mot dans un texte :
+# Counting the number of occurrences of a word in a text :
 lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-mot = "elit"
+word = "elit"
 
 lorem = lorem.replace(",", "").replace(".", "")
 lorem = lorem.lower()
 
 lorem_split = lorem.split()
-print(lorem_split.count(mot))
+print(lorem_split.count(word))
 
-# Inverser l'ordre des mots dans une phrase :
-phrase = "Bonjour tout le monde"
-phrase_split = phrase.split()
-resultat = []
+# Reversing the order of words in a sentence :
+sentence = "Hello everybody"
+sentence_split = sentence.split()
+result = []
 
-for mot in reversed(phrase_split):
-    resultat.append(mot)
+for word in reversed(sentence_split):
+    result.append(word)
 
-resultat_formate = " ".join(resultat).capitalize()
-print(resultat_formate)
+result_form = " ".join(result).capitalize()
+print(result_form)
 
-# Compter le nombre de phrases dans un texte :
+# Counting the number of sentences in a text :
 lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 print(lorem.count("."))
 
-# Compter le nombre d'occurrence de chaque lettre de l'alphabet :
+# Counting the number of occurrences of each letter of the alphabet :
 lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 alphabet = string.ascii_lowercase
-resultat = dict(zip(alphabet, [0] * len(alphabet)))
+result = dict(zip(alphabet, [0] * len(alphabet)))
 
-for lettre in lorem.lower():
-    if resultat.get(lettre) is not None:
-        resultat[lettre] += 1
-print(dict(resultat))
+for letter in lorem.lower():
+    if result.get(letter) is not None:
+        result[letter] += 1
+print(dict(result))
 
-# Créer une classe pour gérer des voitures :
-class Voiture(object):
-    def __init__(self, marque, prix, couleur):
-    self.marque = marque
-    self.prix = prix
-    self.couleur = couleur
+# Create a class to manage cars :
+class car(object):
+    def __init__(self, brand, price, color):
+    self.brand = brand
+    self.price = price
+    self.color = color
 
-super_voiture = Voiture("Lamborghini", 150000, "rouge")
-print(super_voiture.marque)
-print(super_voiture.prix)
-print(super_voiture.couleur)
+super_car = car("Lamborghini", 150000, "red")
+print(super_car.brand)
+print(super_car.price)
+print(super_car.color)
