@@ -112,52 +112,51 @@ for letter in text:
     print("{0}{1:^{2}}{0}".format(symbol2, letter, length - 2))
 print(symbol1*length)
 
-# Ajouter un séparateur de milliers à un nombre :
-def ajout_separateur(nombre):
-    nombre = str(nombre)[::-1]
-    resultat = ""
-    for i, chiffre in enumerate(nombre, 1):
-        chiffre_formatte = chiffre + "," if i % 3 == 0 and i != len(nombre) else chiffre
-        resultat += chiffre_formatte
-    return resultat[::-1]
-nombre = 52039480394023
-print(ajout_separateur(nombre))
+# Adding a thousand separator to a number :
+def adding_separator(number):
+    number = str(number)[::-1]
+    result = ""
+    for i, digit in enumerate(number, 1):
+        digit_form = digit + "," if i % 3 == 0 and i != len(number) else digit
+        result += digit_form
+    return result[::-1]
+number = 52039480394023
+print(adding_separator(number))
 
-# Calculer l'année de naissance à partir d'un âge donné :
+# Calculating the year of birth from a given age :
 age = 102
-mois_de_naissance = 9
-annee_actuelle = datetime.today().year
-mois_actuel = datetime.today().month
-resultat = annee_actuelle - age - (1 if mois_de_naissance > mois_actuel else 0)
-print(resultat)
+month_of_birth = 9
+current_year = datetime.today().year
+current_month = datetime.today().month
+result = current_year - age - (1 if month_of_birth > current_month else 0)
+print(result)
 
-# Trier une liste d'employés :
+# Sort a list of employees :
 employes = ["Pierre", "Marie", "Julien", "Astrid", "Zoé"]
 
 alphabet = string.ascii_lowercase
 employes_a_m = [e for e in employes if e[0].lower() in alphabet[:13]]
 employes_n_z = [e for e in employes if e[0].lower() in alphabet[13:]]
 
-print("Employés de A à M:", ", ".join(sorted(employes_a_m)))
-print("Employés de N à Z:", ", ".join(sorted(employes_n_z)))
+print("Employes from A to M:", ", ".join(sorted(employes_a_m)))
+print("Employes from N to Z:", ", ".join(sorted(employes_n_z)))
 
-# Créer un octet aléatoire :
+# Create a random byte :
 "".join(list([str(rd.choice(range(2))) for _ in range(8)]))
 
-# Calculer nombre de jours entre 2 dates :
+# Calculate number of days between 2 dates :
 f_date = date(2014, 7, 2)
 l_date = date(2018, 7, 11)
 delta = l_date - f_date
 
 print(delta.days)
 
-#Créer un générateur de mot de passe :
-def mot_de_passe():
-    taille = int(input("taille :"))
-    symboles = string.ascii_letters + string.digits + string.punctuation
-    mdp = ''.join(rd.choice(symboles) for _ in range(taille))
-    print(mdp)
-
+# password generator :
+def password():
+    length = int(input("length :"))
+    symbols = string.ascii_letters + string.digits + string.punctuation
+    pw = ''.join(rd.choice(symbols) for _ in range(length))
+    print(pw)
 
 
 # Compter le nombre d'occurrence d'un mot dans un texte :
