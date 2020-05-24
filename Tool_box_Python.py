@@ -73,44 +73,44 @@ rd.shuffle(word)
 number = 209812
 sum([int(i) for i in str(number)])
 
-# Remplacer un élément dans une liste :
-liste4 = ["Pierre", "Marie", "Julie", "Adrien", "Julie"]
-nom_a_chercher = "Julie"
-nouveau_nom = "Julien"
-[x.replace(nom_a_chercher, nouveau_nom) for x in liste4]
+# Replacing an item in a list :
+list4 = ["Pierre", "Marie", "Julie", "Adrien", "Julie"]
+name_to_find = "Julie"
+new_name = "Julien"
+[x.replace(name_to_find, new_name) for x in list4]
 
-# Enlever les doublons d'une liste :
-nombres = [1, 2, 2, 3, 4, 5, 5, 5, 6, 7, 7, 8, 9, 10]
-nombres_sans_duplicats = []
-for i in nombres:
-    if i not in nombres_sans_duplicats:
-        nombres_sans_duplicats.append(i)
+# Removing duplicates from a list :
+numbers = [1, 2, 2, 3, 4, 5, 5, 5, 6, 7, 7, 8, 9, 10]
+numbers_without_duplicates = []
+for i in numbers:
+    if i not in numbers_without_duplicates:
+        numbers_without_duplicates.append(i)
 
-# Ajouter des éléments dans un dictionnaire :
+# Adding items to a dictionary :
 employes = {}
-liste = ["Pierre","Marie","Adrien"]
+list = ["Pierre","Marie","Adrien"]
 i = 1
-for element in liste:
+for element in list:
     employes["id-{:02d}".format(i)] = element
     i += 1
 print(employes)
 
-# Créer un dictionnaire avec les lettres de l'alphabet :
+# Create a dictionary with the letters of the alphabet :
 alphabet = string.ascii_lowercase
 indices = range(1, len(alphabet) + 1)
-liste_zip = zip(indices, alphabet)
-resultat = dict(liste_zip)
-print(resultat)
+list_zip = zip(indices, alphabet)
+result = dict(list_zip)
+print(result)
 
-# Encadrer un texte :
-texte = "Vive les Maths"
-longueur = len(texte)
-symbole1 = "-"
-symbole2 = "|"
-print(symbole1*longueur)
-for lettre in texte:
-    print("{0}{1:^{2}}{0}".format(symbole2, lettre, longueur - 2))
-print(symbole1*longueur)
+# Framing a text :
+text = "Vive les Maths"
+length = len(text)
+symbol1 = "-"
+symbol2 = "|"
+print(symbol1*length)
+for letter in text:
+    print("{0}{1:^{2}}{0}".format(symbol2, letter, length - 2))
+print(symbol1*length)
 
 # Ajouter un séparateur de milliers à un nombre :
 def ajout_separateur(nombre):
