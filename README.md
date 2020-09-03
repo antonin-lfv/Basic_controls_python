@@ -1,2 +1,2 @@
 # data-manipulation
-This article is going to show you how manipulate list, tuple, array, set, class and dictionary with Python
+This article is going to show you how to manipulate lists, tuples, arrays, sets, classes and dictionaries with Python
